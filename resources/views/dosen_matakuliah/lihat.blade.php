@@ -8,6 +8,7 @@
 		<tr>
 			<td>Nama Dosen</td>
 			<td>:</td>
+			<td>{{ dd($dosen_matakuliah->dosen->nama) }}</td>
 			<td>{{ $dosen_matakuliah->dosen->nama }}</td>
 		</tr>
 		<tr>

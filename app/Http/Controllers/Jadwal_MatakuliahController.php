@@ -29,7 +29,7 @@ class Jadwal_MatakuliahController extends Controller
     	// return $this->simpan();
     }
 
-    public function simpan(Requests $input)
+    public function simpan(Request $input)
     {
     	$jadwal_matakuliah = new Jadwal_Matakuliah($input->only('ruangan_id','dosen_matakuliah_id','   mahasiswa_id'));
             if($jadwal_matakuliah->save()) $this->informasi = "Jadwal Mahasiswa berhasil disimpan";

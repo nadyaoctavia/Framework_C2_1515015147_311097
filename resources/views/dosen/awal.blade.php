@@ -22,7 +22,7 @@
 				<td>{{ $x++}}</td>
 				
 				<td>{{ $dosen->nama or 'Nama Kosong' }}</td>
-				<td>{{ $dosen->nim or 'NIP Kosong' }}</td>
+				<td>{{ $dosen->nip or 'NIP Kosong' }}</td>
 				<td>
 					<div class="btn-group" role="group">
 						<a href="{{url('dosen/edit/'.$dosen->id)}}" class="btn btn-warning btn-xs" data-toogle="tooltip" data-placement="top" title="Ubah"><i class="fa fa-pencil"></i></a>
