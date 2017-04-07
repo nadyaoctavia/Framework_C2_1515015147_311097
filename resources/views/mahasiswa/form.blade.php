@@ -1,40 +1,36 @@
 <div class="form-group">
-	<label class="col-sm-2 control-label" id="nama">Nama Mahasiswa</label>
+	<label class="col-sm-2 control-label">Nama</label>
 	<div class="col-sm-10">
-		{!! Form::text('nama',null,['class'=>'form-control','id'=>'nama','placeholder'=>"Nama"]) !!}	
+	{!! Form::text('nama',null,['class'=>'form-control','placeholder'=>"Nama"]) !!}
+	</div>
+	</div>
+	<div class="form-group">
+<label class="col-sm-2 control-label">NIM</label>
+	<div class="col-sm-10">
+	{!! Form::text('nim',null,['class'=>'form-control','placeholder'=>"NIM"]) !!}
 	</div>
 </div>
-
+	<div class="form-group">
+<label class="col-sm-2 control-label">Alamat</label>
+	<div class="col-sm-10">
+	{!! Form::textarea('alamat',null,['class'=>'form-control','placeholder'=>"Alamat"]) !!}
+	</div>
+</div>
+{{-- 	<div class="form-group">
+<label class="col-sm-2 control-label">Pengguna_Id</label>
+	<div class="col-sm-10">
+	{!! Form::text('pengguna_id',null,['class'=>'form-control','placeholder'=>"Pengguna_Id"]) !!}
+	</div>
+</div> --}}
 <div class="form-group">
-	<label class="col-sm-2 control-label" id="nim">NIM</label>
+<label class="col-sm-2 control-label">Username</label>
 	<div class="col-sm-10">
-		{!! Form::text('nim',null,['class'=>'form-control','id'=>'nim','placeholder'=>"NIM"]) !!}	
+	{!! Form::text('username',null,['class'=>'form-control','placeholder'=>"username"]) !!}
 	</div>
 </div>
-<div class="form-group">
-	<label class="col-sm-2 control-label" id="alamat">Alamat</label>
+	<div class="form-group">
+<label class="col-sm-2 control-label">Password</label>
 	<div class="col-sm-10">
-		{!! Form::textarea('alamat',null,['class'=>'form-control','id'=>'alamat','placeholder'=>"Alamat"]) !!}	
+	{!! Form::password('password',null,['class'=>'form-control','placeholder'=>"password"]) !!}
 	</div>
 </div>
-<div class="form-group">
-	<label class="col-sm-2 control-label">Username</label>
-	<div class="col-sm-10">
-		{!! Form::text('username',null,['class'=>'form-control','placeholder'=>"Username"]) !!}	
-	</div>
-</div>
-<div class="form-group">
-	<label class="col-sm-2 control-label">Password</label>
-	<div class="col-sm-10">
-		{!! Form::password('password',['class'=>'form-control','placeholder'=>"Password"]) !!}	
-	</div>
-</div>
-
-<!-- $mahasiswa = Mahasiswa::find($id);
-        $mahasiswa->nama = $input->nama;
-        $mahasiswa->nip = $input->nip;
-        $mahasiswa->alamat = $input->alamat;
-        $mahasiswa->pengguna_id = $input->pengguna_id;
-        $informasi = $mahasiswa->save() ? 'Berhasil update data': 'Gagal update data';
-        return redirect ('mahasiswa') -> with (['informasi'=>$informasi]);
-    } -->
