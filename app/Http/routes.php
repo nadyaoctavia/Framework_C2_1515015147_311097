@@ -10,6 +10,38 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('/',function()
+{
+	return \App\Dosen_Matakuliah::whereHas('dosen',function($query)
+	{
+		$query->where('nama','like','%s%');
+
+	})->with('dosen')->groupBy('dosen_id')->get();
+});
+
+Route::get('/',function()
+{
+	return \App\Dosen_Matakuliah::whereHas('dosen',function($query)
+	{
+		$query->where('nama','like','%s%');
+
+	})
+	->orWhereHas('matakuliah', function ($kueri)
+	{
+		$kueri->where('title','like','%a%');		
+	})
+	->with('dosen','matakuliah')
+	->groupBy('dosen_id')
+	->get();
+});
+
+Route::get('ujiDoesntHave','RelationshipRebornController@ujiDoesntHave');
+
+Route::get('ujiHas','RelationshipRebornController@ujiHas');
+
+
+
+
 Route::get('pengguna','PenggunaController@awal');
 Route::get('ruangan','RuanganController@awal');
 Route::get('matakuliah','MatakuliahController@awal');
@@ -86,8 +118,8 @@ Route::get('jadwal_matakuliah/hapus/{jadwal_matakuliah}','Jadwal_MatakuliahContr
 Route::get('jadwal_matakuliah/lihat/{jadwal_matakuliah}','Jadwal_MatakuliahController@lihat');
 
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
 
    /* Route::get('hello-world', function () {
     return 'Hello-World';
@@ -96,4 +128,4 @@ Route::get('/', function () {
     {
     	return "Hallo world dari pengguna $pengguna";
     */
-    });
+    // });
