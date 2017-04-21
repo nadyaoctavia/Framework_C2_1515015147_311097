@@ -5,7 +5,7 @@
 
  <strong><a href="{{url('jadwal_matakuliah')}}">
    <i class="fa text-default fa-chevron-left"></i>
- </a>Perbaharui data jadwal Mahasiswa</strong>
+ </a>Perbaharui Data Jadwal Matakuliah</strong>
  </div>
  {!! Form::model($jadwalmatakuliah,['url'=>'jadwal_matakuliah/edit/'.$jadwal_matakuliah->id,'class'=>'form-horizontal']) !!}
 @include('jadwal_matakuliah.Form')

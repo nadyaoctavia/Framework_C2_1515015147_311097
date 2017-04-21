@@ -6,7 +6,7 @@
 
  <strong><a href="{{url('dosen')}}">
    <i style="color:white;" class="fa text-default fa-chevron-left"></i>
- </a>Tambah data dosen</strong>
+ </a>Tambah Data Dosen</strong>
  </div>
  {!! Form::open(['url'=>'dosen/simpan','class'=>'form-horizontal']) !!}
 @include('dosen.Form')

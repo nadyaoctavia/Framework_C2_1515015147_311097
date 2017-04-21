@@ -3,7 +3,7 @@
 <div class="panel panel-warning">
 	<div class="panel-heading">
 
- <strong><a href="{{ url('mahasiswa') }}"><i style="color:#8a6d3b" class="fa text-default fa-chevron-left"></i></a>Detail Data mahasiswa
+ <strong><a href="{{ url('mahasiswa') }}"><i style="color:#8a6d3b" class="fa text-default fa-chevron-left"></i></a>Detail Data Mahasiswa
  </strong>
  </div>
  <table class="table">

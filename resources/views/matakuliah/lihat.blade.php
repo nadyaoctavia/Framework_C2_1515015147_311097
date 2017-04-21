@@ -24,6 +24,7 @@
 				<td>{{ $matakuliah->created_at }}</td>
 			</tr>
 			<tr>
+				<td class="col-xs-4">Diupdate tanggal</td>
 				<td class="col-xs-1">:</td>
 				<td>{{ $matakuliah->updated_at }}</td>
 			</tr>

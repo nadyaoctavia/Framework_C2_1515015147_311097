@@ -3,9 +3,9 @@
 @section('container')
 <div class="panel panel-default">
 <div class="panel-heading">
-<strong>Seluruh Data jadwal_matakuliah</strong>
+<strong>Seluruh Data Jadwal Matakuliah</strong>
 <a href="{{url('jadwal_matakuliah/tambah')}}" class="btn btn-xs btn-primary pull-right">
- <i class="fa fa-plus"></i>jadwal_matakuliah</a>
+ <i class="fa fa-plus"></i>Jadwal Matakuliah</a>
  <div class="clearfix"></div>
  </div>
  <table class="table">

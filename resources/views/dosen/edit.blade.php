@@ -6,7 +6,7 @@
 
  <strong><a href="{{url('dosen')}}">
    <i class="fa text-default fa-chevron-left"></i>
- </a>Perbaharui data dosen</strong>
+ </a>Perbaharui Data Dosen</strong>
  </div>
  {!! Form::model($dosen,['url'=>'dosen/edit/'.$dosen->id,'class'=>'form-horizontal']) !!}
 @include('dosen.Form')

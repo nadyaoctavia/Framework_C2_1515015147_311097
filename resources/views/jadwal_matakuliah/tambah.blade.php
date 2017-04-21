@@ -6,7 +6,7 @@
 
  <strong><a href="{{url('jadwal_matakuliah')}}">
    <i style="color:white;" class="fa text-default fa-chevron-left"></i>
- </a>Tambah data jadwal_matakuliah</strong>
+ </a>Tambah Data Jadwal Matakuliah</strong>
  </div>
  {!! Form::open(['url'=>'jadwal_matakuliah/simpan','class'=>'form-horizontal']) !!}
 @include('jadwal_matakuliah.Form')
