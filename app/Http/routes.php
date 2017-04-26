@@ -11,6 +11,20 @@
 |
 */
 
+Route::get('/login','SesiController@form');
+Route::post('/login','SesiController@validasi');
+Route::get('/logout','SesiController@logout');
+Route::get('/','SesiController@index');
+Route::group(['middleware'=>'AuthentifikasiUser'],function ()
+{
+	Route::get('pengguna','PenggunaController@awal');
+	Route::get('pengguna/tambah','PenggunaController@tambah');
+	Route::post('pengguna/simpan','PenggunaController@simpan');
+	Route::get('pengguna/edit/{pengguna}','PenggunaController@edit');
+	Route::post('pengguna/edit/{pengguna}','PenggunaController@update');
+	Route::get('pengguna/hapus/{pengguna}','PenggunaController@hapus');
+	Route::get('pengguna/lihat/{pengguna}','PenggunaController@lihat');
+
 Route::get('/',function()
 {
 	return \App\Dosen_Matakuliah::whereHas('dosen',function($query)
@@ -123,19 +137,19 @@ Route::get('/', function (Illuminate\Http\Request $request)
 	echo "Ini adalah request dari method get". $request->nama;
 });
 
-use Illuminate\Http\Request;
-Route::get('/', function()
-{
-	echo Form::open(['url'=>'/']).
-		 Form::label('nama').
-		 Form::text('nama',null).
-		 Form::submit('kirim').
-		 Form::close();
-});
+// use Illuminate\Http\Request;
+// Route::get('/', function()
+// {
+// 	echo Form::open(['url'=>'/']).
+// 		 Form::label('nama').
+// 		 Form::text('nama',null).
+// 		 Form::submit('kirim').
+// 		 Form::close();
+// });
 
-Route::post('/', function (Request $request)
-{
-	echo "Hasil dari form input tadi nama :". $request->nama;
+// Route::post('/', function (Request $request)
+// {
+// 	echo "Hasil dari form input tadi nama :". $request->nama;
 });
 
 // Route::get('/', function () {
